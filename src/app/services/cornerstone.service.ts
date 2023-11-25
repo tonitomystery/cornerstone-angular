@@ -25,7 +25,7 @@ export class CornerstoneService {
   }
 
   displayImage(element: any, image: any, viewport: any) {
-    cornerstone.displayImage(element, image, viewport);
+    cornerstone.displayImage(...arguments);
   }
 
   enableElement(element: any) {
