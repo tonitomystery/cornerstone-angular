@@ -36,14 +36,9 @@ export class CornerstoneService {
   }
 
   isEnabledElement(element: any) {
-    let enableElements = cornerstone.getEnabledElements();
-
-    for (const enableElement of enableElements) {
-      if (enableElement.element === element) {
-        return true;
-      }
-    }
-    return false;
+    return cornerstone
+      .getEnabledElements(element)
+      .some((enableElement: any) => enableElement.element === element);
   }
 
   getDefaultViewport(element: any, image: any) {
